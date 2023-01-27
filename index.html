@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wk Helper by DRAR</title>
+  </head>
+  <body>
+    <section>
+      <h3>VIEW WORKITEM</h3>
+      <button
+        onclick="window.open('https://dev.azure.com/GRC-CT/CT/_workitems/assignedtome/')"
+      >
+        My Workitems
+      </button>
+      <br />
+      <input type="text" placeholder="Enter Workitem ID" id="workitemid" />
+      <button onclick="openWorkitem()">View</button>
+      <script>
+        const openWorkitem = () => {
+          const workitemid = document.querySelector("#workitemid").value;
+          window.open(
+            `https://dev.azure.com/GRC-CT/CT/_workitems/edit/${workitemid}/`
+          );
+        };
+      </script>
+      <br />
+      <input type="text" placeholder="Enter Sprint ID" id="sprintid" />
+      <button onclick="openSprint()">View</button>
+      <script>
+        const openSprint = () => {
+          const sprintid = document.querySelector("#sprintid").value;
+          window.open(
+            `https://dev.azure.com/GRC-CT/CT/_sprints/backlog/CTDT-VS-%20Wardell/CT/CTDT/Capstone%20Sprints/Sprint%20${sprintid}`
+          );
+        };
+      </script>
+    </section>
+    <section>
+      <h3>OPEN ENVIRONMENTS</h3>
+      <button onclick="window.open('https://dev-home.ctcorporation.com/')">
+        DEV ENVIRONMENT
+      </button>
+      <button onclick="window.open('https://test-home.ctcorporation.com/')">
+        TEST ENVIRONMENT
+      </button>
+    </section>
+    <section>
+      <h3>SEE DASHBOARD</h3>
+      <button
+        onclick="window.open('https://dev.azure.com/GRC-CT/CT/_dashboards/dashboard/e77c001b-374a-41b4-ad27-226714c16763')"
+      >
+        WARDELL DASHBOARD
+      </button>
+    </section>
+  </body>
+</html>
